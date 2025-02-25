@@ -15,6 +15,8 @@ pipeline {
                 echo "my master branch"
           }
 
+        }
+
         stage('SonarQube-Analysis'){
              scripts{
                  withSonarQubeEnv(cridentialsId:'jenkins-sonarqube-token'){
@@ -22,6 +24,5 @@ pipeline {
                  }
              }
           }
-        }
    }
 }
